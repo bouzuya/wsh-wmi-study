@@ -1,4 +1,4 @@
-wmi-properties
+wsh-wmi-study
 ====================
 
 Requirements
