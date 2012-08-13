@@ -5,18 +5,30 @@
         <runtime>
             <description>指定したWMIクラスのプロパティを表示する。</description>
             <named
+                name="Server"
+                helpstring="対象のサーバー"
+                type="string"
+                required="false"
+                />
+            <named
+                name="Namaspace"
+                helpstring="対象の名前空間"
+                type="string"
+                required="false"
+                />
+            <named
                 name="ClassName"
-                helpstring="表示するWMIクラス名"
+                helpstring="対象のクラス"
                 type="string"
                 required="true"
                 />
             <named
                 name="PropertyName"
-                helpstring="表示するプロパティ名(部分一致)"
+                helpstring="対象のプロパティ名(部分一致)"
                 type="string"
                 required="false"
                 />
-            <example>Example: cscript scripts.wsf //Job:WmiProperties /ClassName:Win32_LogicalDisk /PropertyName:FreeSpace</example>
+            <example>Example: cscript scripts.wsf //Job:WmiProperties /Server:. /Namespace:root\cimv2 /ClassName:Win32_LogicalDisk /PropertyName:FreeSpace</example>
         </runtime>
         <script language="VBScript" src="string.vbs" />
         <script language="VBScript" src="datetime.vbs" />
